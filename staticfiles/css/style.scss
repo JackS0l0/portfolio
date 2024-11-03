@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+$second-color:#EBEEFF;
+$second-color-dark:#1f1f23;
+$main-color-dark:#191a1f;
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+::selection{
+    background-color: $second-color;
+    color: black;
+}
+body{
+    font-family: "Bona Nova SC", serif;
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2vw;
+    }
+    p{
+        margin: 0;
+    }
+    color: black;
+    font-size: 1.2vw;
+    header{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        .float1{
+            background-color: $second-color;
+            display: flex;
+            justify-content: space-between;
+            padding: 1vw 3vw;
+            border-radius: 0 0 10vw 10vw;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            a{
+                font-size: 1.6vw;
+            }
+            span:last-child{
+                a{
+                    margin-left: 2vw;
+                }
+            }
+        }
+        .float2{
+            .btn{
+                border: 0;
+            }
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin: auto;
+            border-radius: 0 0 10vw 10vw;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            background-color: $second-color;
+            padding: 0 1vw;
+            a{
+                font-size: 1.2vw;
+            }
+            i{
+                font-size: 1.2vw;
+            }
+            button{
+                font-size: 1.2vw;
+            }
+            span{
+                display: flex;
+                align-items: center;
+                div{
+                    margin-right: 0.2vw;
+                }
+                a{
+                    margin-right: 0.2vw;
+                }
+                .offer{
+                    .modal{
+                        .modal-dialog{
+                            width: 100%;
+                            margin: 10vh auto 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        .headBlock{
+            z-index: -1;
+            margin-top: 5vw;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+            .box1{
+                justify-content: center;
+                padding-left: 3vw;
+                p{
+                    width: 80%;
+                }
+            }
+            .box2{
+                padding-right: 3vw;
+                .img{
+                    img{
+                        width: 28vw;
+                    }
+                }
+            }
+            .wave{
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                height: 17vh;
+            }
+        }
+        .adverseAboutMe{
+            background-color: $second-color;
+            .headtxt{
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                font-size: 2vw;
+                flex-direction: column;
+            }
+            .adverseMain{
+                display: flex;
+                justify-content: space-between;
+                margin: 1vw 3vw 0 3vw;
+                .block{
+                    .img{
+                        img{
+                            width: 30vw;
+                        }
+                    }
+                    .box{
+                        margin: 3vw 0;
+                    }
+                }
+            }
+        }
+        .caruselProjects{
+            .caruselClass{
+                margin-bottom: 3vh;
+                div{
+                    .coverBox{
+                        a{
+                            img{
+                                margin: 0.2vw;
+                                border: 1px solid black;
+                                height: 20vh;
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+        .headTxt{
+            display: flex;
+            justify-content: center;
+            font-size: 2vw;
+            margin: 1vw 0 2vw 0;
+            font-weight: bold;
+        }
+        .contactBlock{
+            .location{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 3vw;
+            }
+            .coninfo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60%;
+                margin: auto;
+                a{
+                    font-size: 2vw;
+                    color: white;
+                    padding: 0.5vw 1vw;
+                    border-radius: 0.4vw;
+                    background-color: black;
+                }
+                a:first-child{
+                    color: white;
+                    padding: 0.5vw 1vw;
+                    border-radius: 0.4vw;
+                    background-color: green;
+                }
+                a:last-child{
+                    color: white;
+                    padding: 0.5vw 1vw;
+                    border-radius: 0.4vw;
+                    background-color: blue;
+                }
+                justify-content: space-between;
+                font-size: 2vw;
+            }
+        }
+    }
+}
+body.dark {
+    background-color: $main-color-dark;
+    color: white;
+    a{
+        color: white;
+    }
+    header{
+        .float1{
+            background-color: $second-color-dark;
+            border-color: white;
+        }
+        .float2{
+            background-color: $second-color-dark;
+            button{
+                color: white;
+            }
+        }
+    }
+    main{
+        .adverseAboutMe{
+            background-color: $second-color-dark;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    body{
+        header{
+            display: none;
+        }
+    }
+}

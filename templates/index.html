@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <main>
+        <div class="headBlock">
+            <div class="box1">
+                {% for post in welcometext %}
+                    {{post.txt | safe}}
+                {% endfor %}
+            </div>
+            <div class="box2">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/du16zi7rr/image/upload/f_auto,q_auto/ryosnlc9ghmrb4x1gcvl" alt="foto">
+                </div>
+            </div>
+            <div class="wave">
+                <img id="waveImage" src="../static/media/wave1.svg" alt="wave1">
+            </div>
+        </div>
+        <div class="adverseAboutMe">
+            <div class="headtxt">
+                <p>Discovery my portfolio</p>
+                <p>Order website or Offer a job</p>
+            </div>
+            <div class="adverseMain" id="about">
+                <div class="block">
+                    {% for post in aboutmeleft %}
+                        <div class="box">
+                            {{post.txt|safe}}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="block">
+                    <div class="img">
+                        <img src="https://res.cloudinary.com/du16zi7rr/image/upload/f_auto,q_auto/ztxwwak0oixhxialzlyb" alt="foto">
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="box">
+                        {% for post in aboutmeright %}
+                            <div class="box">
+                                {{post.txt|safe}}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave2">
+            <img id="waveImage2" src="../static/media/wave2.svg" alt="wave1">
+        </div>
+        <div class="headTxt" id="portfolio">
+            <p>Last projects</p>
+        </div>
+        <div class="caruselProjects">
+            <div class="firstCarusel caruselClass">
+                {% for post in projectsup %}
+                    <div>
+                        <div class="coverBox">
+                            <a href="{{post.url}}" target="_blank">
+                                <img src="{{post.img}}" alt="{{post.name}}">
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="secondCarusel caruselClass" style="direction: rtl;">
+                <div>
+                    <div class="coverBox">
+                        <a href="#" target="_blank">
+                            <img src="../static/media/1.jpg">
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div>
+                    <div class="coverBox">
+                        <a href="#" target="_blank">
+                            <img src="../static/media/1.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="coverBox">
+                        <a href="#" target="_blank">
+                            <img src="../static/media/1.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="coverBox">
+                        <a href="#" target="_blank">
+                            <img src="../static/media/1.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="coverBox">
+                        <a href="#" target="_blank">
+                            <img src="../static/media/1.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headTxt" id="contact">
+            <p>Contact</p>
+        </div>
+        <div class="contactBlock">
+            <div class="location">
+                {% for post in location %}
+                    <p>{{post.name}}</p>
+                {% endfor %}
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="coninfo">
+                {% for post in whatsapp %}
+                    <a href="{{post.number}}" target="_blank">Whatsapp</a>
+                {% endfor %}
+                {% for post in phone %}
+                    <a href="{{post.number}}" target="_blank">Phone</a>
+                {% endfor %}
+                {% for post in telegram %}
+                    <a href="{{post.number}}" target="_blank">Telegram</a>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}
