@@ -79,10 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const waveImage = document.getElementById("waveImage");
     const waveImage2 = document.getElementById("waveImage2");
-    const lightWaveSrc = "{% static 'media/wave1.svg' %}";
-    const darkWaveSrc = "{% static 'media/wavedark1.svg' %}";
-    const lightWaveSrc2 = "{% static 'media/wave2.svg' %}";
-    const darkWaveSrc2 = "{% static 'media/wavedark2.svg' %}";
+    const lightWaveSrc = "../static/media/wave1.svg";
+    const darkWaveSrc = "../static/media/wavedark1.svg";
+    const lightWaveSrc2 = "../static/media/wave2.svg";
+    const darkWaveSrc2 = "../static/media/wavedark2.svg";
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
         body.classList.add("dark");

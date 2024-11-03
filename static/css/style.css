@@ -215,4 +215,10 @@ body.dark header .float2 button {
 }
 body.dark main .adverseAboutMe {
   background-color: #1f1f23;
+}
+
+@media only screen and (max-width: 600px) {
+  body header {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
